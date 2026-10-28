@@ -9,7 +9,6 @@ import './style.css';
 
 
 const GITHUB = 'https://github.com/douglasjunior/freemotion';
-const NPM = 'https://www.npmjs.com/package/freemotion';
 
 const QUICK_START = `npx freemotion init my-video
 cd my-video
@@ -20,6 +19,15 @@ npm run render     # out/HelloWorld.mp4`;
 const SNIPPET = `import { ScrollPlayer } from 'freemotion';
 
 <ScrollPlayer composition={showcase} scrollLength="500vh" />`;
+
+const REASONS = [
+  { icon: '⚛️', title: 'It\'s just React', text: 'Components, props, hooks, CSS, SVG, fonts and any npm package. If it renders in a browser, it renders in your video.' },
+  { icon: '🎞️', title: 'Frame-perfect', text: 'Everything derives from useCurrentFrame(). Any frame can be drawn on its own, so renders are deterministic and run in parallel.' },
+  { icon: '⚡', title: 'Fast', text: 'Several Chromium tabs capture frames at once and stream them straight into ffmpeg. The video above renders in about 5 seconds.' },
+  { icon: '🔥', title: 'A live studio', text: 'Scrub the timeline, step frame by frame, switch compositions and see every edit instantly with hot reload.' },
+  { icon: '🌐', title: 'Plays on the web', text: '<Player> runs any composition inside a React page, and <ScrollPlayer> turns the page scroll into the timeline.' },
+  { icon: '🆓', title: 'MIT, all of it', text: 'The studio, the renderer and the player are free for any use, at any company size. No tiers, no seats, no render fees.' },
+];
 
 const ScrollStory = () => {
   const [frame, setFrame] = useState(0);
@@ -45,41 +53,50 @@ const Page = () => (
   <main>
     <header className="hero">
       <div className="brand">
-        <Logo size={56} />
+        <Logo size={64} />
         <span className="eyebrow">freemotion</span>
       </div>
       <h1>Make videos with React.</h1>
-      <p>
-        Write videos as React components. Every frame is a function of time, so you can <b>preview</b> them live
-        in the studio, <b>render</b> them to MP4, WebM, GIF or PNG, and <b>play</b> them inside any web page, even
-        driven by the scroll.
-      </p>
-      <ul className="pitch">
-        <li><b>It's just React.</b> Components, props, hooks, CSS, SVG, fonts and any npm package.</li>
-        <li><b>Frame-perfect.</b> Everything derives from <code>useCurrentFrame()</code>, so renders are deterministic and run in parallel.</li>
-        <li><b>MIT, all of it.</b> The studio, the renderer and the player are free for any use. No tiers, no seats, no render fees.</li>
-      </ul>
-      <pre className="quick-start"><code>{QUICK_START}</code></pre>
+      <p>Preview live. Render to MP4. Play on the web. Free and open source.</p>
       <nav className="links">
-        <a className="button" href={GITHUB}>GitHub</a>
-        <a className="button secondary" href={NPM}>npm</a>
+        <a className="button" href={GITHUB}>Get started →</a>
+        <code className="install">npx freemotion init my-video</code>
       </nav>
-      <span className="scroll-cue">Scroll ↓ to play the video below with your scroll</span>
+      <span className="scroll-cue">Scroll ↓ the video below plays as you scroll</span>
     </header>
 
     <ScrollStory />
 
     <section className="explain">
-      <h2>How it works</h2>
+      <h2>You just watched a freemotion video.</h2>
       <p>
-        <code>&lt;ScrollPlayer&gt;</code> renders a tall section with the player stuck to the viewport and turns the
-        scroll position inside the section into a frame. When the section ends, the video scrolls away with the page.
+        The composition you scrolled through is a React component. The same code renders it to MP4 on the command
+        line and plays it here, where <code>&lt;ScrollPlayer&gt;</code> turns the scroll position into the frame.
       </p>
       <pre><code>{SNIPPET}</code></pre>
-      <p>
-        For a custom layout, <code>useScrollFrame()</code> gives you the frame and you place the{' '}
-        <code>&lt;Player&gt;</code> yourself. The composition lives in <code>src/showcase</code>.
-      </p>
+    </section>
+
+    <section className="reasons">
+      <h2>Why freemotion?</h2>
+      <ul className="cards">
+        {REASONS.map(reason => (
+          <li key={reason.title}>
+            <span className="icon">{reason.icon}</span>
+            <h3>{reason.title}</h3>
+            <p>{reason.text}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section className="explain start">
+      <h2>Get started in a minute.</h2>
+      <p>You only need Node.js 20.19+. The new project comes with two compositions and a scroll-driven page like this one.</p>
+      <pre><code>{QUICK_START}</code></pre>
+      <nav className="links">
+        <a className="button" href={GITHUB}>Get started on GitHub →</a>
+        <a className="button secondary" href="https://www.npmjs.com/package/freemotion">npm</a>
+      </nav>
     </section>
 
     <footer>
