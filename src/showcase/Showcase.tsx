@@ -127,7 +127,7 @@ const Render = () => {
   const total = 300;
   return (
     <AbsoluteFill>
-      <Heading>Render to MP4, WebM, GIF or PNG.</Heading>
+      <Heading>Render to MP4, WebM, GIF, PNG or SVG.</Heading>
       <Enter delay={2} style={{ position: 'absolute', top: 160, left: 150, right: 150 }}>
         <Window title="zsh">
           <div style={{ padding: '26px 30px', fontFamily: fonts.mono, fontSize: 22, lineHeight: 1.9, minHeight: 230 }}>

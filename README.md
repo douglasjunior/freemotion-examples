@@ -68,6 +68,7 @@ The banner of this README and of freemotion's, as a three-second intro. A ball t
 ```bash
 npx freemotion render Banner                          # out/Banner.mp4
 npx freemotion render Banner --frame 95 -o banner.png # the README still
+npx freemotion render Banner -o banner.svg            # animated SVG, no ffmpeg needed
 ```
 
 ## 🌐 Scroll-driven page · `web/`

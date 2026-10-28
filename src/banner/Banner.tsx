@@ -111,7 +111,7 @@ export const Banner = () => {
             </div>
           </Enter>
           <div style={{ display: 'flex', gap: 12, marginTop: 8 }}>
-            {['MIT', 'Studio', 'MP4 · WebM · GIF', 'Player'].map((label, i) => (
+            {['MIT', 'Studio', 'MP4 · WebM · GIF · SVG', 'Player'].map((label, i) => (
               <Enter key={label} delay={32 + i * 4} distance={16}>
                 <span style={{ display: 'block', fontSize: 19, padding: '8px 16px', borderRadius: 999, color: colors.muted, boxShadow: `inset 0 0 0 1px ${colors.line}`, background: 'rgba(255, 255, 255, 0.03)' }}>
                   {label}
