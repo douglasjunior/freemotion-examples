@@ -29,8 +29,8 @@ jobs:
       # --ignore-scripts skips the ffmpeg-static download: the web build does not render video.
       - run: npm ci --ignore-scripts
 
-      # The site lives at https://<owner>.github.io/<repo>/, so assets need the repository name as base path.
-      - run: npm run web:build -- --base "/${{ github.event.repository.name }}/"
+      # The site is served at the root of its custom domain (freemotion.douglasjunior.work), so the default base "/" is right.
+      - run: npm run web:build
 
       - uses: actions/configure-pages@v6
 
