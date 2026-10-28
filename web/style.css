@@ -1,0 +1,132 @@
+:root {
+  --background: #0b0b12;
+  --surface: #14141d;
+  --line: rgba(255, 255, 255, 0.09);
+  --text: #f4f4f8;
+  --muted: #9a9ab0;
+  --pink: #ff4f7b;
+  --amber: #ffb547;
+  /* The video, the progress bar and the frame counter share this width, leaving room for both below. */
+  --stage-width: min(1100px, 100%, (100vh - 120px) * 16 / 9);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: "Inter Variable", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+main {
+  overflow-x: clip;
+}
+
+.hero,
+.explain,
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.eyebrow {
+  color: var(--pink);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(40px, 7vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.hero p,
+.explain p {
+  color: var(--muted);
+  font-size: 19px;
+}
+
+.scroll-cue {
+  margin-top: 24px;
+  color: var(--muted);
+}
+
+.progress {
+  width: var(--stage-width);
+  height: 3px;
+  border-radius: 2px;
+  background: var(--line);
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  transform-origin: left;
+  background: linear-gradient(90deg, var(--amber), var(--pink));
+}
+
+.hint {
+  margin: 0;
+  color: var(--muted);
+  font-family: "JetBrains Mono Variable", ui-monospace, monospace;
+  font-size: 14px;
+}
+
+.hint b {
+  color: var(--amber);
+  font-weight: 600;
+}
+
+.explain {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+h2 {
+  font-size: 40px;
+  letter-spacing: -0.03em;
+  margin: 0 0 12px;
+}
+
+code {
+  font-family: "JetBrains Mono Variable", ui-monospace, monospace;
+  font-size: 0.9em;
+  color: var(--text);
+}
+
+pre {
+  margin: 28px 0;
+  padding: 22px 24px;
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--line);
+  overflow-x: auto;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+footer {
+  padding-bottom: 60px;
+  color: var(--muted);
+}
+
+a {
+  color: var(--pink);
+}

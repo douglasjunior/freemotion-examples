@@ -1,0 +1,14 @@
+{
+  "title": "Monthly downloads",
+  "subtitle": "Sample data, fetched from public/data.json",
+  "points": [
+    { "label": "Jan", "value": 1200 },
+    { "label": "Feb", "value": 1850 },
+    { "label": "Mar", "value": 2400 },
+    { "label": "Apr", "value": 2150 },
+    { "label": "May", "value": 3300 },
+    { "label": "Jun", "value": 4100 },
+    { "label": "Jul", "value": 5200 },
+    { "label": "Aug", "value": 6900 }
+  ]
+}

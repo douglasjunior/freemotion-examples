@@ -1,0 +1,57 @@
+{
+  "name": "freemotion-examples",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Example videos and a scroll-driven page made with freemotion.",
+  "author": {
+    "name": "Douglas Nassif Roma Junior",
+    "email": "nassifrroma@gmail.com",
+    "url": "https://github.com/douglasjunior"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglasjunior/freemotion-examples.git"
+  },
+  "type": "module",
+  "scripts": {
+    "studio": "freemotion studio",
+    "render": "freemotion render --all",
+    "render:showcase": "freemotion render Showcase",
+    "readme-assets": "freemotion render Banner --frame 95 -o assets/banner.png && freemotion render Banner -o assets/banner.gif --scale 0.5 --every-nth-frame 2 && freemotion render Showcase -o assets/showcase.gif --scale 0.625 --every-nth-frame 2",
+    "web": "vite web",
+    "web:build": "vite build web",
+    "ts": "tsc --noEmit",
+    "lint": "eslint . --cache --cache-location .eslintcache/",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "ffmpeg-static": "^5.3.0",
+    "freemotion": "^0.1.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "eslint": "^9.39.5",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.13.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.5"
+  },
+  "allowScripts": {
+    "ffmpeg-static": true,
+    "unrs-resolver": false,
+    "fsevents": false
+  }
+}
