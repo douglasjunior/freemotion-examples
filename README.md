@@ -76,7 +76,7 @@ npx freemotion render Banner --frame 95 -o banner.png # the README still
 
 **Live at [douglasjunior.work/freemotion-examples](https://douglasjunior.work/freemotion-examples/)**, published to GitHub Pages by the [`pages` workflow](.github/workflows/pages.yml) on every push to `main`.
 
-A regular Vite app that plays the Showcase composition with freemotion's [`<ScrollPlayer>`](web/main.tsx). The player sticks to the viewport inside a section five screens tall, and the scroll position inside the section picks the frame. Scroll down and the video moves forward; scroll up and it rewinds. When the section ends, the video scrolls away with the page.
+freemotion's site: a regular Vite app that presents the library and plays the Showcase composition with freemotion's [`<ScrollPlayer>`](web/main.tsx). The player sticks to the viewport inside a section five screens tall, and the scroll position inside the section picks the frame. Scroll down and the video moves forward; scroll up and it rewinds. When the section ends, the video scrolls away with the page.
 
 ```bash
 npm run web           # dev server

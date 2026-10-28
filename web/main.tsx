@@ -2,10 +2,20 @@ import { ScrollPlayer } from 'freemotion';
 import { StrictMode, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 
+import { Logo } from '../src/components';
 import { showcase } from '../src/compositions';
 
 import './style.css';
 
+
+const GITHUB = 'https://github.com/douglasjunior/freemotion';
+const NPM = 'https://www.npmjs.com/package/freemotion';
+
+const QUICK_START = `npx freemotion init my-video
+cd my-video
+npm install
+npm run studio     # preview with hot reload
+npm run render     # out/HelloWorld.mp4`;
 
 const SNIPPET = `import { ScrollPlayer } from 'freemotion';
 
@@ -34,13 +44,27 @@ const ScrollStory = () => {
 const Page = () => (
   <main>
     <header className="hero">
-      <span className="eyebrow">freemotion · Player</span>
-      <h1>The video plays as you scroll.</h1>
+      <div className="brand">
+        <Logo size={56} />
+        <span className="eyebrow">freemotion</span>
+      </div>
+      <h1>Make videos with React.</h1>
       <p>
-        The same composition that renders to MP4 runs live in the page. Here the scroll position picks the frame,
-        so every wheel step moves the animation forward or back.
+        Write videos as React components. Every frame is a function of time, so you can <b>preview</b> them live
+        in the studio, <b>render</b> them to MP4, WebM, GIF or PNG, and <b>play</b> them inside any web page, even
+        driven by the scroll.
       </p>
-      <span className="scroll-cue">Scroll ↓</span>
+      <ul className="pitch">
+        <li><b>It's just React.</b> Components, props, hooks, CSS, SVG, fonts and any npm package.</li>
+        <li><b>Frame-perfect.</b> Everything derives from <code>useCurrentFrame()</code>, so renders are deterministic and run in parallel.</li>
+        <li><b>MIT, all of it.</b> The studio, the renderer and the player are free for any use. No tiers, no seats, no render fees.</li>
+      </ul>
+      <pre className="quick-start"><code>{QUICK_START}</code></pre>
+      <nav className="links">
+        <a className="button" href={GITHUB}>GitHub</a>
+        <a className="button secondary" href={NPM}>npm</a>
+      </nav>
+      <span className="scroll-cue">Scroll ↓ to play the video below with your scroll</span>
     </header>
 
     <ScrollStory />
@@ -59,7 +83,8 @@ const Page = () => (
     </section>
 
     <footer>
-      Made with <a href="https://github.com/douglasjunior/freemotion">freemotion</a>.
+      Made with <a href={GITHUB}>freemotion</a>. This page is the <code>web/</code> example of{' '}
+      <a href="https://github.com/douglasjunior/freemotion-examples">freemotion-examples</a>.
     </footer>
   </main>
 );

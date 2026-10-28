@@ -13,7 +13,7 @@ src/
   data-story/         # Bar chart fed by public/data.json through delayRender()
   hello/              # Same component as freemotion's init template
   banner/             # README banner: an intro whose last frame is the still
-web/                  # Vite app: <ScrollPlayer> plays the showcase as the page scrolls
+web/                  # freemotion's site (GitHub Pages): a hero presenting the library, then <ScrollPlayer> plays the showcase as the page scrolls
 assets/               # Images used by the READMEs (regenerate with `npm run readme-assets`)
 ```
 
