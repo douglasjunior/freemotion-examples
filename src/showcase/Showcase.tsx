@@ -167,7 +167,7 @@ const Outro = () => (
     <Enter delay={14}>
       <div style={{ display: 'flex', gap: 16, fontSize: 26 }}>
         <span style={{ fontFamily: fonts.mono, padding: '10px 22px', borderRadius: 12, background: colors.raised, boxShadow: `inset 0 0 0 1px ${colors.line}` }}>
-          <span style={{ color: colors.pink }}>$ </span>npm i freemotion
+          <span style={{ color: colors.pink }}>$ </span>npx freemotion init
         </span>
         <span style={{ padding: '10px 22px', borderRadius: 12, color: colors.muted, boxShadow: `inset 0 0 0 1px ${colors.line}` }}>MIT licensed</span>
       </div>
