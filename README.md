@@ -72,9 +72,9 @@ npx freemotion render Banner --frame 95 -o banner.png # the README still
 
 ## 🌐 Scroll-driven page · `web/`
 
-<a href="https://douglasjunior.work/freemotion-examples/"><img src="assets/scroll-page.png" alt="A web page with the Showcase video in a sticky frame, halfway through, and a frame counter below it." width="800"></a>
+<a href="https://freemotion.douglasjunior.work/"><img src="assets/scroll-page.png" alt="A web page with the Showcase video in a sticky frame, halfway through, and a frame counter below it." width="800"></a>
 
-**Live at [douglasjunior.work/freemotion-examples](https://douglasjunior.work/freemotion-examples/)**, published to GitHub Pages by the [`pages` workflow](.github/workflows/pages.yml) on every push to `main`.
+**Live at [freemotion.douglasjunior.work](https://freemotion.douglasjunior.work/)**, published to GitHub Pages by the [`pages` workflow](.github/workflows/pages.yml) on every push to `main`.
 
 freemotion's site: a regular Vite app that presents the library and plays the Showcase composition with freemotion's [`<ScrollPlayer>`](web/main.tsx). The player sticks to the viewport inside a section five screens tall, and the scroll position inside the section picks the frame. Scroll down and the video moves forward; scroll up and it rewinds. When the section ends, the video scrolls away with the page.
 
