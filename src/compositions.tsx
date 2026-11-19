@@ -3,6 +3,7 @@ import { defineComposition } from 'freemotion';
 import { Banner, BANNER_DURATION } from './banner/Banner';
 import { DataStory } from './data-story/DataStory';
 import { HelloWorld, type HelloWorldProps } from './hello/HelloWorld';
+import { MediaDemo, MEDIA_DEMO_DURATION } from './media/MediaDemo';
 import { Showcase, SHOWCASE_DURATION } from './showcase/Showcase';
 
 
@@ -46,5 +47,14 @@ export default [
     width: 1080,
     height: 1080,
     durationInFrames: 150,
+  }),
+  defineComposition({
+    id: 'MediaDemo',
+    folder: 'Media',
+    component: MediaDemo,
+    fps: 30,
+    width: 1280,
+    height: 720,
+    durationInFrames: MEDIA_DEMO_DURATION,
   }),
 ];
