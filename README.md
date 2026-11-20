@@ -59,6 +59,28 @@ The project that `npx freemotion init` creates. Its title and subtitle are props
 npx freemotion render HelloWorld --props '{"title":"Launch day","subtitle":"Version 2 is here."}'
 ```
 
+### Audio & video · `src/media`
+
+A six-second composition with a video clip and a separately mixed soundtrack. Both assets live in `public/`; `<Video>` renders the clip frame-accurately, and `<Audio>` fades the music in and out by frame.
+
+```bash
+npx freemotion render MediaDemo                 # out/MediaDemo.mp4
+npx freemotion render MediaDemo --format mov   # out/MediaDemo.mov
+```
+
+### Output formats
+
+The renderer in freemotion 0.2.1 supports these formats:
+
+| Format | Encodings | Notes |
+|---|---|---|
+| `.mp4` | H.264 / H.265 video, AAC audio | H.264 by default. |
+| `.webm` | VP9 video, Opus audio | Requires ffmpeg built with libvpx; supports transparency when encoded with alpha. |
+| `.mov` | ProRes / H.264 video, AAC audio | ProRes HQ by default; ProRes 4444 supports transparency. |
+| `.gif` | Animated GIF | Palette-based; use `--scale` or `--every-nth-frame` to reduce file size. |
+| `.png` | Still image | Render a frame with `--frame`; no ffmpeg needed. |
+| `.svg` | Animated SVG | No ffmpeg needed. |
+
 ### Banner · `src/banner`
 
 <img src="assets/banner.gif" alt="The banner building itself: the logo pops, the name springs in letter by letter and a ball traces an ease-in-out curve, leaving copies of itself behind." width="640">
